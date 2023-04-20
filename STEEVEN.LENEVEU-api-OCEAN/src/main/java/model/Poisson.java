@@ -3,6 +3,7 @@ package model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 
 @Entity
 public class Poisson
@@ -15,6 +16,8 @@ public class Poisson
 
     private int specie;
     private int lifespan;
+
+    @Lob
     private String note;
     private String pictureLink;
 
