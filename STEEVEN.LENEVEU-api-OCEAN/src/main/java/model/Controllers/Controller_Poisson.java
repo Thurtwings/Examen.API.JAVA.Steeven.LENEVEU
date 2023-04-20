@@ -34,7 +34,11 @@ public class Controller_Poisson
 
 
     }
-
+    @PostMapping("/addFish/fish")
+    public Poisson CreateNewFish(@RequestBody Poisson fish)
+    {
+        return fish;
+    }
 
     @PostMapping("/{id}/{specie}")
     public Poisson AssignSpecieToFish(@PathVariable int id, @PathVariable int specie)
